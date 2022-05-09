@@ -1,7 +1,7 @@
 import Navbar from "components/Navbar";
 import Headline from "components/Headline";
 import Post from "components/Post";
-import Layout from "../../components/Layout";
+import Layout from "components/Layout";
 
 export default function LandingPages() {
   return (
@@ -16,7 +16,7 @@ export default function LandingPages() {
           category="Social"
           date="7 April 2022"
           avatar="/author-4.png"
-          author="Thomas Jacob"
+          author="Thomas William Jacob"
           job="Kidnapper"
         />
         <Post
@@ -42,17 +42,17 @@ export default function LandingPages() {
           title="Keep healthy: Wake up at 4am a day to improve productivity"
           category="Social"
           date="3 August 2022"
-          avatar="/author-2.jpg"
-          author="Amicia De Rune"
-          job="UI Designer"
+          avatar="/author-1.png"
+          author="Mia Winter"
+          job="Entrepreneur"
         />
         <Post
           img="/thumbnail-6.png"
           title="Coding environment at Big Tech company F.A.N.G"
           category="Technology"
           date="1 December 2022"
-          avatar="/author-5.jpg"
-          author="Jill Valentine"
+          avatar="/author-7.jpg"
+          author="Adi Cahya Saputra"
           job="Fullstack Developer"
         />
         <Post
@@ -60,8 +60,8 @@ export default function LandingPages() {
           title="Top 3 popular framework to safe your time while developing a software"
           category="Technology"
           date="6 June 2022"
-          avatar="/author-3.png"
-          author="Adam Wathan"
+          avatar="/author-8.jpg"
+          author="Mark Zuckerberg"
           job="Tailwindcss Founder"
         />
       </div>

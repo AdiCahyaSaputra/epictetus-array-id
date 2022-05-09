@@ -83,7 +83,7 @@ export default function Navbar({category}) {
 
         <div className="md:hidden bg-white
           w-10 h-10 flex justify-center 
-          items-center rounded-full"
+          items-center rounded-full focus:bg-gray-400"
           onClick={() => setSearch(true)}>
           <Image
             src="/search.svg"
@@ -95,15 +95,7 @@ export default function Navbar({category}) {
         {search && (
           <div className="absolute inset-0 z-30
             bg-gray-900/80 min-h-screen"
-          >
-            <div className="w-10 h-10 
-            text-white flex justify-center
-            items-center z-30 absolute right-4
-            top-4 text-xl bg-gray-500/40
-            hover:bg-gray-500/50 p-2
-            rounded-full select-none"
-              onClick={() => setSearch(false)}>X</div>
-          </div>
+          ></div>
         )}
 
         <form className={
@@ -113,19 +105,38 @@ export default function Navbar({category}) {
           md:static md:translate-x-0`
         }>
           <div className="bg-white 
-            rounded-full pl-4 
+            rounded-full pl-2 
             w-max flex items-center">
-            <Image
-              src="/search.svg"
-              width={20}
-              height={20}
-            />
             <input type="text"
-              className="outline-none text-gray-700
+              className="peer outline-none order-2 text-gray-700
               py-2 px-4 bg-transparent tracking-wide"
               autoComplete="off"
               placeholder="Search..."
             />
+            <div className="w-10 h-10 flex order-1
+              justify-center items-center p-2 opacity-40
+              peer-focus:opacity-100">
+              <Image
+                src="/search.svg"
+                width={20}
+                height={20}
+              />
+            </div>
+            {search && (
+              <div className="w-10 h-10 
+                text-gray-700 flex justify-center
+                items-center text-xl p-2 opacity-40
+                hover:opacity-100 order-last
+                rounded-full select-none"
+                onClick={() => setSearch(false)}>
+                <Image
+                  width={24}
+                  height={24}
+                  src="/x.svg"
+                />
+              </div>
+
+            )}
           </div>
         </form>
       </div>
